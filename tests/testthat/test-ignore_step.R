@@ -10,9 +10,6 @@ test_that("ignore_step outputs a recipe", {
   expect_equal(class(ignore_step(rec, "rm")), "recipe")
   expect_equal(class(ignore_step(rec, 1)), "recipe")
   expect_equal(class(ignore_step(rec, rec$steps[[1]]$id)), "recipe")
-  # expect_s3_class(ignore_step(rec, "rm"), "recipe")
-  # expect_s3_class(ignore_step(rec, 1), "recipe")
-  # expect_s3_class(ignore_step(rec, rec$steps[[1]]$id), "recipe")
 })
 
 test_that("ignore_step removes the right number of steps", {
